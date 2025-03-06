@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Profit Calculator</title>
+</head>
+
+<body>
+    <h2>Deposit Profit Calculator</h2>
+
+    <script>
+        function calculateProfit() {
+            // Step 1: Take User Input
+            let initialAmount = parseFloat(prompt("Enter the initial deposit amount:"));
+
+            // Input Validation
+            if (isNaN(initialAmount) || initialAmount <= 0) {
+                alert("Please enter a valid positive number.");
+            } else {
+                // Step 2: Define Interest Rate (e.g., 5% annual interest rate)
+                const interestRate = 0.05;
+
+                // Step 3: Calculate Profit
+                let profit = initialAmount * interestRate;
+                let totalAmount = initialAmount + profit;
+
+                // Step 4: Display the Result
+                alert(`Initial Amount: $${initialAmount.toFixed(2)}\nAnnual Interest Rate: ${(interestRate * 100)}%\nProfit: $${profit.toFixed(2)}\nTotal Amount: $${totalAmount.toFixed(2)}`);
+
+                console.log("Initial Amount:", initialAmount);
+                console.log("Annual Interest Rate:", interestRate);
+                console.log("Profit:", profit);
+                console.log("Total Amount:", totalAmount);
+            }
+        }
+
+        // Step 5: Call the function
+        calculateProfit();
+    </script>
+
+</body>
+
+</html>

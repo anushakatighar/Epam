@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #283618;
+        }
+
+        label, input, button {
+            margin: 10px 0;
+            display: block;
+        }
+
+        button {
+            background-color: #bc6c25;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #dda15e;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #606c38;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reverse an Integer</h1>
+
+    <label for="numberInput">Enter an Integer:</label>
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+
+    <button onclick="reverseAndDisplay()">Reverse Number</button>
+
+    <div id="result"></div>
+
+    <script>
+        function reverseNumber(num) {
+            // Handle negative numbers by preserving the sign
+            const isNegative = num < 0;
+            const reversedStr = Math.abs(num).toString().split('').reverse().join('');
+            const reversedNum = parseInt(reversedStr, 10);
+
+            return isNegative ? -reversedNum : reversedNum;
+        }
+
+        function reverseAndDisplay() {
+            const input = document.getElementById('numberInput').value;
+
+            if (input === "") {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            const number = parseInt(input, 10);
+            const reversed = reverseNumber(number);
+            document.getElementById('result').textContent = `Reversed Number: ${reversed}`;
+        }
+    </script>
+</body>
+
+</html>

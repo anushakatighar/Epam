@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Store</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FEFAE0;
+            color: #283618;
+        }
+
+        header {
+            background-color: #606C38;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #283618;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #BC6C25;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #606C38;
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Print-Specific Styles */
+        @media print {
+            body {
+                font-size: 14pt;
+                color: black;
+                background: none;
+                margin: 1in;
+            }
+
+            nav, footer {
+                display: none; /* Hide navigation and footer */
+            }
+
+            .product {
+                page-break-inside: avoid; /* Avoid breaking inside product listings */
+                border: 1px solid black; /* Ensure visibility in print */
+            }
+
+            h1, h2 {
+                color: black; /* Ensure headings are visible */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Gadget Store</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Your one-stop shop for the latest and greatest gadgets. We provide cutting-edge technology to keep you ahead.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Gadget Store, we specialize in offering the latest tech innovations. From smart devices to gaming consoles, we bring technology closer to you.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <h3>Smartphone Pro X</h3>
+            <p>Experience next-level performance with the new Smartphone Pro X, featuring a 108MP camera and 5G connectivity.</p>
+        </div>
+
+        <div class="product">
+            <h3>Smartwatch Ultra</h3>
+            <p>Track your fitness and stay connected with the stylish and durable Smartwatch Ultra.</p>
+        </div>
+
+        <div class="product">
+            <h3>Noise-Cancelling Headphones</h3>
+            <p>Immerse yourself in high-quality sound with our latest noise-cancelling headphones, perfect for work and play.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Gadget Store. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
